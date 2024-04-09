@@ -1,0 +1,22 @@
+
+
+#menu-principal {
+  background-color: #242427;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar-brand,
+.navbar-toggler,
+.navbar-toggler-icon,
+.nav-link {
+  color: white;
+}
+.carousel-item img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
