@@ -80,13 +80,42 @@
         <div class="row">
           <div class="col"></div>
           <div class="col-10 contenido-pagina">
-            <h1 class="mt-5">Lorem ipsum dolor sit amet,</h1>
+            <h1 class="mt-5">¡Contáctanos!</h1>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat mauris eget turpis molestie accumsan. Donec at erat est. Praesent imperdiet maximus dignissim. Phasellus condimentum fermentum lectus, quis cursus dui pellentesque ut. Quisque at dolor ac urna laoreet tempus vel a velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet lorem lorem. 
+                Si tienes alguna duda o sugerencia, no dudes en contárnoslo.
             </p>
-            <p>
-                Donec fermentum porttitor arcu, a euismod libero molestie sed. Duis ullamcorper metus tortor, placerat sodales purus dignissim non. Proin vel nulla rutrum nisl accumsan posuere sed sed tellus. Aenean tincidunt neque vestibulum dui congue, non viverra tellus pretium. Morbi tincidunt tellus a maximus sodales. Nam mi orci, mattis vel enim et, efficitur accumsan augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-            </p>
+            <form style="width: 80%;margin:auto;" class="needs-validation" novalidate>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="formContacto1" class="form-control" required/>
+                <label class="form-label" for="formContacto1">Nombre</label>
+              </div>
+            
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="formContacto2" class="form-control" placeholder="tu_correo@mail.com" required/>
+                <label class="form-label" for="formContacto2">Email</label>
+              </div>
+            
+              <div data-mdb-input-init class="form-outline mb-4">
+                <textarea class="form-control" id="formContacto3" rows="4" required></textarea>
+                <label class="form-label" for="formContacto3">Mensaje</label>
+              </div>
+            
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="formContacto4"
+                  checked
+                />
+                <label class="form-check-label" for="formContacto4">
+                  Enviar una copia a mi correo
+                </label>
+              </div>
+            
+              <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4" id="enviarMensaje">Enviar</button>
+            </form>
           </div>
           <div class="col"></div>
         </div>
@@ -123,5 +152,57 @@
           </div>
       </div>
     </footer>
+<!-- Modal -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalConfirmacionLabel">¡Mensaje enviado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¡Muchas gracias por contactarnos! Diariamente recibimos muchos mensajes, por lo que talvez tardemos un poco en responderte, pero ¡ten por seguro que lo haremos!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrarModal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
+  <script>
+    $(document).ready(function(){
+      $("#enviarMensaje").click(function(){
+        var nombre = $("#formContacto1").val();
+        var email = $("#formContacto2").val();
+        var mensaje = $("#formContacto3").val();
+        var emailRegex = /^[^\s@]+@[^\s@]+$/;;
+
+        if(nombre !== "" && email !== "" && mensaje !== "" && emailRegex.test(email)){
+          $("#modalConfirmacion").modal('show');
+          $("#formContacto1").val("");
+          $("#formContacto2").val("");
+          $("#formContacto3").val("");
+        } else {
+          //alert("Por favor, rellene todos los campos antes de enviar el mensaje.");
+        }
+      });
+    });
+
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    </script>
+    
 </html>
