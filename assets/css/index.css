@@ -68,3 +68,16 @@ color: white;
     height: 1px;
     background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
   }
+
+  @media only screen and (max-width: 600px){
+    .col-izq, 
+    .col-der {
+      display: none;
+    }
+    .navbar-brand,
+.navbar-toggler,
+.navbar-toggler-icon,
+.nav-link, footer {
+  color: white;
+}
+  }
