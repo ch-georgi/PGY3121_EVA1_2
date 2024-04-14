@@ -10,6 +10,9 @@ body {
   );
 }
 
+.navbar-toggler,.navbar-toggler-icon{
+color: white;
+}
 #menu-principal {
   background-color: #242427;
   color: white;

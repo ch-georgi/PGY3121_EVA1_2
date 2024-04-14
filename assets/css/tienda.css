@@ -1,0 +1,10 @@
+#carouselTienda img {
+    width: 100vw;
+    max-height: 40vh;
+    object-fit: cover;
+    margin-top: 50px;
+  }
+
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    color:#8e19b8;
+}
