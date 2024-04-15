@@ -1,6 +1,6 @@
-# Proyecto XYZ
+# Proyecto Peludos & Facheros
 
-¡Bienvenido al repositorio del Proyecto Peludos y Facheros!
+¡Bienvenido al repositorio del Proyecto Peludos & Facheros!
 
 Este proyecto consiste en desarrollar un sitio web com html y css para el ramo de Programación Web.
 
