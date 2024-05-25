@@ -30,6 +30,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="/assets/js/js.js"></script>
     <title>Peludos y Facheros</title>
   </head>
   <body>
@@ -37,14 +38,14 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="menu-principal">
           <div class="container-fluid">
-              <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i> Peludos y Facheros</a>
+              <a class="navbar-brand" href="/index.html"><i class="fa-solid fa-paw"></i> Peludos y Facheros</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="/">Inicio</a>
+                          <a class="nav-link" href="/index.html">Inicio</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
@@ -116,5 +117,162 @@
         </div>
       </div>
     </footer>
+    <div
+      class="modal fade"
+      id="modalVerOpciones"
+      tabindex="-1"
+      aria-labelledby="modalVerOpcionesLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalVerOpcionesLabel">
+              New message
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary">Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modalVerOpciones = document.getElementById("modalVerOpciones");
+      const modalTitle = modalVerOpciones.querySelector('.modal-title');
+      const form = modalVerOpciones.querySelector("form");
+      const radioesData = {
+        "@bandanas": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Rosa" },
+            { id: "radio2", label: "Roja" },
+            { id: "radio3", label: "Azul" },
+            { id: "radio4", label: "Negra" },
+          ],
+        },
+
+        "@faja": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Rosa estándar" },
+            { id: "radio2", label: "Verde estándar" },
+            { id: "radio3", label: "Amarillo estándar" },
+          ],
+        },
+        "@collarIsab": {
+          label: "Selecciona una talla",
+          options: [
+            { id: "radio1", label: "XS" },
+            { id: "radio2", label: "S" },
+            { id: "radio3", label: "M" },
+            { id: "radio4", label: "L" },
+            { id: "radio5", label: "XL" },
+          ],
+        },
+        "@corbatin": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Azul estándar" },
+            { id: "radio2", label: "Negro estándar" },
+          ],
+        },
+        "@tag": {
+          label: "Selecciona un diseño",
+          options: [
+            { id: "radio1", label: "Círculo" },
+            { id: "radio2", label: "Cuadro ondulado" },
+            { id: "radio3", label: "Hueso" },
+            { id: "radio4", label: "Corazón" },
+            { id: "radio5", label: "Estrella" },
+            { id: "radio6", label: "Manzana" },
+            { id: "radio7", label: "Círculo y flor" },
+          ],
+        },
+        "@vestido": {
+          label: "Selecciona un diseño",
+          options: [
+            { id: "radio1", label: "Rojo" },
+            { id: "radio2", label: "Azul" },
+            { id: "radio3", label: "Gris" },
+            { id: "radio4", label: "Rosado" },
+          ],
+        },
+        "@aromaterapia": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Olor naranja" },
+            { id: "radio2", label: "Olor rosas" },
+            { id: "radio3", label: "Olor manzana" },
+            { id: "radio3", label: "Olor lavanda" },
+          ],
+        },
+        // Agrega más datos según sea necesario
+      };
+
+      function populateFormWithData(dataKey) {
+        const { label, options } = radioesData[dataKey];
+        modalTitle.textContent = label;
+        form.innerHTML = ""; // Limpiar el contenido del formulario antes de agregar nuevas opciones
+
+        options.forEach((radio) => {
+          const radioElement = document.createElement("div");
+          radioElement.classList.add("form-check");
+          radioElement.innerHTML = `
+            <input class="form-check-input" type="radio" id="${radio.id}"  name="flexRadioProducto" >
+            <label class="form-check-label" for="${radio.id}">${radio.label}</label>
+          `;
+          form.appendChild(radioElement);
+        });
+      }
+
+      modalVerOpciones.addEventListener("show.bs.modal", function (event) {
+        const button = event.relatedTarget;
+        const dataKey = button.getAttribute("data-bs-producto");
+        populateFormWithData(dataKey);
+      });
+    });
+  </script>
 </html>
