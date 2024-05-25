@@ -30,198 +30,46 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="/assets/js/js.js"></script>
     <title>Peludos y Facheros</title>
   </head>
   <body>
     <!--Menu-->
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="menu-principal">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><i class="fa-solid fa-paw"></i> Peludos y Facheros</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Tienda
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="./pages/tiendaalimentos.html">Alimentos</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./pages/tiendaropas.html">Ropa y Collares</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./pages/tiendaaccesorios.html">Accesorios</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/donaciones.html"
-                  >Donaciones</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-              </li>
-            </ul>
+          <div class="container-fluid">
+              <a class="navbar-brand" href="/index.html"><i class="fa-solid fa-paw"></i> Peludos y Facheros</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="/index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/pages/tiendaalimentos.html">Alimentos</a></li>
+                              <li><a class="dropdown-item" href="/pages/tiendaropas.html">Ropa y Collares</a></li>
+                              <li><a class="dropdown-item" href="/pages/tiendaaccesorios.html">Accesorios</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/pages/donaciones.html">Donaciones</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+                      </li>
+                  </ul>
+              </div>
           </div>
-        </div>
       </nav>
-    </header>
-    <main class="flex-shrink-0">
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./assets/img/inicio.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <a href="./pages/nosotros.html">
-            <img
-              src="./assets/img/nosotros.jpg"
-              class="d-block w-100"
-              alt="..."
-            /></a>
-          </div>
-          <div class="carousel-item">
-            <a href="./pages/tienda.html">
-              <img
-                src="./assets/img/tienda.jpg"
-                class="d-block w-100"
-                alt="..."
-              /></a>
-          </div>
-          <div class="carousel-item">
-            <a href="./pages/donaciones.html">
-              <img
-                src="./assets/img/donaciones.jpg"
-                class="d-block w-100"
-                alt="..."
-              /></a>
-          </div>
-          <div class="carousel-item">
-            <a href="./pages/contacto.html">
-              <img
-                src="./assets/img/contacto.jpg"
-                class="d-block w-100"
-                alt="..."
-              /></a>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="container" style="width: 100%">
-        <div class="row">
-          <div class="col col-izq"></div>
-          <div class="col-10 contenido-pagina">
-            <h1 class="mt-5">Peludos y Facheros </h1>
-            <p class="lead">
-              Bienvenidos a Peludos y Facheros, su aliado confiable en la adopción de mascotas. Nuestra misión es conectar corazones y hogares con compañeros peludos que buscan un nuevo comienzo. 
-              Fundada por un equipo de amantes de los animales, nuestra empresa no solo se dedica a encontrar hogares amorosos, 
-              sino también a promover la conciencia sobre el bienestar animal y la importancia de adoptar.
-            </p>
-            <p>
-              En Peludos y Facheros, creemos que cada animal merece una segunda oportunidad para ser amado y cuidado. Por eso, trabajamos incansablemente para asegurar que cada adopción sea una unión perfecta tanto para la mascota como para su nuevo dueño. Ofrecemos un proceso de adopción transparente y apoyo continuo para asegurar que la transición sea lo más suave posible.
-
-              Descubra más sobre nuestra historia, nuestros valores y cómo puede ser parte de esta maravillosa 
-              comunidad de rescate y adopción. ¡Juntos podemos hacer una diferencia en la vida de muchos animales necesitados! 
-            </p>
-            
-             <h3> Misión:</h3>
-
-              <p> Prevenir y aliviar la crueldad hacia los animales abandonados o sometidos a privaciones o descuidos, mediante la prestación de cuidados y hospedaje.
-              
-              Rescatar y proporcionar hogares para toda la vida a animales salvajes cautivos grandes, exóticos y en peligro de extinción y educar al público sobre las causas y las soluciones a la crisis mundial de vida silvestre en cautiverio.
-              
-              Chile y el mundo tienen una crisis de vida silvestre cautiva. Hasta 30.000 grandes felinos cautivos, primates , lobos y otros grandes carnívoros viven en condiciones deficientes en todo Chile. De hecho, después de las drogas y las armas ilegales, el comercio de animales exóticos es la tercera fuente de ganancias ilícitas en Chile y en el mundo.</p>
-          </div>
-          <div class="col col-der"></div>
-        </div>
-      </div>
+  </header>
+    <main class="flex-shrink-0" id="contenido_container">
     </main>
 
     <footer class="footer mt-auto py-3 bg-dark">
@@ -269,5 +117,162 @@
         </div>
       </div>
     </footer>
+    <div
+      class="modal fade"
+      id="modalVerOpciones"
+      tabindex="-1"
+      aria-labelledby="modalVerOpcionesLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalVerOpcionesLabel">
+              New message
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary">Añadir</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modalVerOpciones = document.getElementById("modalVerOpciones");
+      const modalTitle = modalVerOpciones.querySelector('.modal-title');
+      const form = modalVerOpciones.querySelector("form");
+      const radioesData = {
+        "@bandanas": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Rosa" },
+            { id: "radio2", label: "Roja" },
+            { id: "radio3", label: "Azul" },
+            { id: "radio4", label: "Negra" },
+          ],
+        },
+
+        "@faja": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Rosa estándar" },
+            { id: "radio2", label: "Verde estándar" },
+            { id: "radio3", label: "Amarillo estándar" },
+          ],
+        },
+        "@collarIsab": {
+          label: "Selecciona una talla",
+          options: [
+            { id: "radio1", label: "XS" },
+            { id: "radio2", label: "S" },
+            { id: "radio3", label: "M" },
+            { id: "radio4", label: "L" },
+            { id: "radio5", label: "XL" },
+          ],
+        },
+        "@corbatin": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Azul estándar" },
+            { id: "radio2", label: "Negro estándar" },
+          ],
+        },
+        "@tag": {
+          label: "Selecciona un diseño",
+          options: [
+            { id: "radio1", label: "Círculo" },
+            { id: "radio2", label: "Cuadro ondulado" },
+            { id: "radio3", label: "Hueso" },
+            { id: "radio4", label: "Corazón" },
+            { id: "radio5", label: "Estrella" },
+            { id: "radio6", label: "Manzana" },
+            { id: "radio7", label: "Círculo y flor" },
+          ],
+        },
+        "@vestido": {
+          label: "Selecciona un diseño",
+          options: [
+            { id: "radio1", label: "Rojo" },
+            { id: "radio2", label: "Azul" },
+            { id: "radio3", label: "Gris" },
+            { id: "radio4", label: "Rosado" },
+          ],
+        },
+        "@aromaterapia": {
+          label: "Selecciona un color",
+          options: [
+            { id: "radio1", label: "Olor naranja" },
+            { id: "radio2", label: "Olor rosas" },
+            { id: "radio3", label: "Olor manzana" },
+            { id: "radio3", label: "Olor lavanda" },
+          ],
+        },
+        // Agrega más datos según sea necesario
+      };
+
+      function populateFormWithData(dataKey) {
+        const { label, options } = radioesData[dataKey];
+        modalTitle.textContent = label;
+        form.innerHTML = ""; // Limpiar el contenido del formulario antes de agregar nuevas opciones
+
+        options.forEach((radio) => {
+          const radioElement = document.createElement("div");
+          radioElement.classList.add("form-check");
+          radioElement.innerHTML = `
+            <input class="form-check-input" type="radio" id="${radio.id}"  name="flexRadioProducto" >
+            <label class="form-check-label" for="${radio.id}">${radio.label}</label>
+          `;
+          form.appendChild(radioElement);
+        });
+      }
+
+      modalVerOpciones.addEventListener("show.bs.modal", function (event) {
+        const button = event.relatedTarget;
+        const dataKey = button.getAttribute("data-bs-producto");
+        populateFormWithData(dataKey);
+      });
+    });
+  </script>
 </html>
