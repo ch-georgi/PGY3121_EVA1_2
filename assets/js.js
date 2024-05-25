@@ -1,3 +1,51 @@
+$(document).ready(function() {
+  const $contenedor = $('#contenido_container');
+
+  function cargarPagina(pagina) {
+      $.ajax({
+          url: `/pages/${pagina}`,
+          method: 'GET',
+          success: function(data) {
+              $contenedor.html(data);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              console.error(`Error al obtener y analizar ${pagina}:`, textStatus, errorThrown);
+          }
+      });
+  }
+
+  function obtenerPaginaDesdeRuta(ruta) {
+      if (ruta === '/' || ruta === '/index.html') {
+          return 'landing.html';
+      } else {
+          const nombrePagina = ruta.split('/').pop();
+          return `${nombrePagina}`;
+      }
+  }
+
+  // Carga inicial de la página basada en la URL actual
+  const paginaInicial = obtenerPaginaDesdeRuta(window.location.pathname);
+  cargarPagina(paginaInicial);
+
+  // Manejar clics en los enlaces del navbar
+  $('nav a').on('click', function(e) {
+      e.preventDefault();
+      const href = $(this).attr('href');
+      const pagina = href.split('/').pop();
+      cargarPagina(pagina);
+      window.history.pushState({}, '', href);
+  });
+
+  // Manejar navegación del navegador (atrás/adelante)
+  window.onpopstate = function() {
+      const pagina = obtenerPaginaDesdeRuta(window.location.pathname);
+      cargarPagina(pagina);
+  };
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const modalVerOpciones = document.getElementById("modalVerOpciones");
   const modalTitle = modalVerOpciones.querySelector(".modal-title");
