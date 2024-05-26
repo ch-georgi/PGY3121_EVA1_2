@@ -179,79 +179,38 @@
     </div>
   </body>
   <script>
+    var radioesData = {};
+    var products = []
+
+    // Agregar variantes de un producto al diccionario de variantes
+    function preparar_variantes_producto(index, item){
+      if (item.multiple){
+        variantSet = { label : item.variLabel, options:[] }
+        for (let i = 0; i < item.variants.length; i++){
+          variantSet.options.push({ id: "radio" + (i+1), label:item.variants[i]});
+        }
+        radioesData[item.id] = variantSet;
+      }
+      products.push(item);
+    }
+    
+    function preparar_datos(data){
+      $.each(data.products, preparar_variantes_producto)
+    }
+
+    function cargar_datos(){
+      $.get("./assets/json/productos.json",
+        preparar_datos
+      )
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       const modalVerOpciones = document.getElementById("modalVerOpciones");
       const modalTitle = modalVerOpciones.querySelector('.modal-title');
       const form = modalVerOpciones.querySelector("form");
-      const radioesData = {
-        "@bandanas": {
-          label: "Selecciona un color",
-          options: [
-            { id: "radio1", label: "Rosa" },
-            { id: "radio2", label: "Roja" },
-            { id: "radio3", label: "Azul" },
-            { id: "radio4", label: "Negra" },
-          ],
-        },
-
-        "@faja": {
-          label: "Selecciona un color",
-          options: [
-            { id: "radio1", label: "Rosa estándar" },
-            { id: "radio2", label: "Verde estándar" },
-            { id: "radio3", label: "Amarillo estándar" },
-          ],
-        },
-        "@collarIsab": {
-          label: "Selecciona una talla",
-          options: [
-            { id: "radio1", label: "XS" },
-            { id: "radio2", label: "S" },
-            { id: "radio3", label: "M" },
-            { id: "radio4", label: "L" },
-            { id: "radio5", label: "XL" },
-          ],
-        },
-        "@corbatin": {
-          label: "Selecciona un color",
-          options: [
-            { id: "radio1", label: "Azul estándar" },
-            { id: "radio2", label: "Negro estándar" },
-          ],
-        },
-        "@tag": {
-          label: "Selecciona un diseño",
-          options: [
-            { id: "radio1", label: "Círculo" },
-            { id: "radio2", label: "Cuadro ondulado" },
-            { id: "radio3", label: "Hueso" },
-            { id: "radio4", label: "Corazón" },
-            { id: "radio5", label: "Estrella" },
-            { id: "radio6", label: "Manzana" },
-            { id: "radio7", label: "Círculo y flor" },
-          ],
-        },
-        "@vestido": {
-          label: "Selecciona un diseño",
-          options: [
-            { id: "radio1", label: "Rojo" },
-            { id: "radio2", label: "Azul" },
-            { id: "radio3", label: "Gris" },
-            { id: "radio4", label: "Rosado" },
-          ],
-        },
-        "@aromaterapia": {
-          label: "Selecciona un color",
-          options: [
-            { id: "radio1", label: "Olor naranja" },
-            { id: "radio2", label: "Olor rosas" },
-            { id: "radio3", label: "Olor manzana" },
-            { id: "radio3", label: "Olor lavanda" },
-          ],
-        },
-        // Agrega más datos según sea necesario
-      };
-
+      
+      
+      
       function populateFormWithData(dataKey) {
         const { label, options } = radioesData[dataKey];
         modalTitle.textContent = label;
@@ -274,5 +233,9 @@
         populateFormWithData(dataKey);
       });
     });
+    
+    $(document).ready(
+      cargar_datos
+    );
   </script>
 </html>

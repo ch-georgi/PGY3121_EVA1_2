@@ -1,0 +1,244 @@
+{
+    "products":[
+        {
+            "id":"bebedero",
+            "name":"Bebedero para gatos y perros",
+            "img":"./assets/img/112714129_1.webp",
+            "type":"other",
+            "price":"$9.990",
+            "sale":true,
+            "oldprice":"$13.990",
+            "multiple":false
+        },
+        {
+            "id":"rascador",
+            "name":"Rascador leopardo para gatos",
+            "img":"./assets/img/rascador-leopardo-para-gatos.jpg",
+            "type":"other",
+            "price":"$49.990",
+            "sale":true,
+            "oldprice":"$69.990",
+            "multiple":false
+        },
+        {
+            "id":"aromaterapia",
+            "name":"Aromaterapia spray",
+            "img":"./assets/img/Aromaterapia_Naranja_1.jpg",
+            "type":"other",
+            "price":"$7.990",
+            "sale":false,
+            "multiple":true,
+            "variLabel":"Selecciona un olor",
+            "variants":["Olor naranja", "Olor rosas", "Olor manzana", "Olor lavanda"]
+        },
+        {
+            "id":"alfombra",
+            "name":"Alfombra olfativa para perros",
+            "img":"./assets/img/4268.jpg",
+            "type":"other",
+            "price":"$30.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"raton",
+            "name":"Ratón a control remoto para gatos",
+            "img":"./assets/img/ef6ed889-991e-4d82-9fac-2bba930d63e2.f6e15fd34d94fb07f1a14bde4d0948c9.webp",
+            "type":"other",
+            "price":"$15.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"cepillo",
+            "name":"Cepillo para perros y gatos",
+            "img":"./assets/img/gsc_113489270_662698_1.webp",
+            "type":"other",
+            "price":"$4.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"cama",
+            "name":"Cama de algodón",
+            "img":"./assets/img/S5230e140ec2741038a7e0f496b4361bbK.webp",
+            "type":"other",
+            "price":"$25.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"botones",
+            "name":"Pack 4 botones de comunicación",
+            "img":"./assets/img/botones.webp",
+            "type":"other",
+            "price":"$20.990",
+            "sale":true,
+            "oldprice":"$24.990",
+            "multiple":false
+        },
+        {
+            "id":"hillsdog",
+            "name":"Hills dog adult small paws 2.04 Kg",
+            "img":"./assets/img/Hills_Alimento_perro_pequeno4590.00.jpg",
+            "type":"food",
+            "price":"$19.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"hillscat",
+            "name":"Hills optimal care adult gato 3.1 Kg",
+            "img":"./assets/img/Hills_gato.webp",
+            "type":"food",
+            "price":"$35.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"hillscatcan",
+            "name":"Hills I/D (Cuidado digestivo) Gato 156g",
+            "img":"./assets/img/hills_gato_lata.jpg",
+            "type":"food",
+            "price":"$3.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"hillsdogcan",
+            "name":"Hills Alimento Humedo Adulto Para Perros",
+            "img":"./assets/img/111100101_ed-min.jpg",
+            "type":"food",
+            "price":"$3.490",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"royalcanin",
+            "name":"Royal Canin Alimento seco gato adulto renal",
+            "img":"./assets/img/royal_canin.jpg",
+            "type":"food",
+            "price":"$29.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"brit",
+            "name":"Brit gatos renal 2kg",
+            "img":"./assets/img/brit-renal-cat-1.png",
+            "type":"food",
+            "price":"$29.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"royalcaninrenal",
+            "name":"Royal Canin renal perros 1.5Kg",
+            "img":"./assets/img/royal-canin-renal-10kg.jpg",
+            "type":"food",
+            "price":"$12.190",
+            "sale":true,
+            "oldprice":"$20.990",
+            "multiple":false
+        },
+        {
+            "id":"royalcaninsachet",
+            "name":"Royal Canin alimento humedo 85g",
+            "img":"./assets/img/Royal-Canin-Pouch-Mini-Adult-85-GR.jpg.webp",
+            "type":"food",
+            "price":"$990",
+            "sale":true,
+            "oldprice":"$1.490",
+            "multiple":false
+        },
+        {
+            "id":"bandanas",
+            "name":"Bandanas",
+            "img":"./assets/img/Bufanda-de-cuello-para-mascotas-pa-uelo-ajustable-de-cuero-para-cachorros-y-gatos.jpg_Q90.jpg_.webp",
+            "type":"clothes",
+            "price":"$2.500 - $5.000",
+            "sale":false,
+            "multiple":true,
+            "variLabel":"Selecciona un color",
+            "variants":["Rosa", "Roja", "Azul", "Negra"]
+        },
+        {
+            "id":"traje",
+            "name":"Traje elegante razas medianas",
+            "img":"./assets/img/D_NQ_NP_624580-MLC70768590585_072023-O.webp",
+            "type":"clothes",
+            "price":"$15.990",
+            "sale":true,
+            "oldprice":"$40.000",
+            "multiple":false
+        },
+        {
+            "id":"faja",
+            "name":"Faja post-operatoria",
+            "img":"./assets/img/D_NQ_NP_747901-MLC72078702548_102023-O.webp",
+            "type":"clothes",
+            "price":"$19.000",
+            "sale":true,
+            "oldprice":"$25.000",
+            "multiple":true,
+            "variLabel":"Selecciona un color",
+            "variants":["Rosa", "Verde", "Amarillo"]
+        },
+        {
+            "id":"isabelino",
+            "name":"Collar isabelino",
+            "img":"./assets/img/COLLAR-ISABELINO.jpg",
+            "type":"clothes",
+            "price":"$2.990 - $5.990",
+            "sale":false,
+            "multiple":true,
+            "variLabel":"Selecciona una talla",
+            "variants":["XS", "S", "M", "L", "XL"]
+        },
+        {
+            "id":"corbatin",
+            "name":"Bandana corbatín",
+            "img":"./assets/img/H7b9aabac4dc34be9a6ef5cebdece54839.jpg_640x640Q90.jpg_.webp",
+            "type":"clothes",
+            "price":"$7.990",
+            "sale":true,
+            "oldprice":"$10.990",
+            "multiple":true,
+            "variLabel":"Selecciona un color",
+            "variants":["Azul", "Negro"]
+        },
+        {
+            "id":"isabelinoinflable",
+            "name":"Collar isabelino inflable talla estándar",
+            "img":"./assets/img/isabelino-inflable-m-.jpg",
+            "type":"clothes",
+            "price":"$11.990",
+            "sale":false,
+            "multiple":false
+        },
+        {
+            "id":"identificador",
+            "name":"Tag identificador",
+            "img":"./assets/img/S3e6447b5fed44688bacbdb8b1a7e2a3bu.webp",
+            "type":"clothes",
+            "price":"$6.990",
+            "sale":true,
+            "oldprice":"$10.990<",
+            "multiple":true,
+            "variLabel":"Selecciona un diseño",
+            "variants":["Círculo", "Cuadrado ondulado", "Hueso", "Corazón", "Estrella", "Manzana", "Círculo y flor"]
+        },
+        {
+            "id":"vestido",
+            "name":"Vestido cuadrillé",
+            "img":"./assets/img/Sea25af276e8d4f529a30edd0b4fd5f1du.jpg_640x640Q90.jpg_.webp",
+            "type":"clothes",
+            "price":"$3.990",
+            "sale":true,
+            "oldprice":"$4.990",
+            "multiple":true,
+            "variLabel":"Selecciona un diseño",
+            "variants":["Rojo", "Azul", "Gris", "Rosado"]
+        }
+    ]
+}
